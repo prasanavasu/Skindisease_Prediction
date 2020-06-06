@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Pharmaceutical Analysis| Home </title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Mechanized Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+
+    </script>
+    <style>
+        
+        .box{
+            position: absolute;
+            top: 250px;
+            left: 450px;
+            width: 750px;
+            height: 320px;
+            background-color: white;
+            
+           
+        }
+      
+        .footer1{
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            width: 100%;
+            height: 70px;
+            background-color: #f2f2f3;
+            text-align: center;
+        }
+        
+    </style>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{%static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800" rel="stylesheet">
+    <style>
+        body {
+          background-image: url(static/images/skin.jfif);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        </style>
+    <!-- //Fonts -->
+</head>
+
+<div class="main-content" id="home">
+    <div class="layer">
+        <!-- header -->
+        <header>
+            <div class="container-fluid px-lg-5" style="width: 100%;height: 90px;background-color: #0a55ffd1;">
+                <!-- nav -->
+                <nav class="py-4 d-lg-flex">
+                    <div id="logo">
+                        <h1> <a href="#">{{fn}}</a></h1>
+                    </div>
+                    
+                    <ul class="menu mt-2 ml-auto">
+                        <li class="{{ho}}"><a href="index">Home</a></li>
+                        <li class="{{im}}"><a href="Img" class="scroll">Image</a></li>
+                        <li class="{{di}}"><a href="dis" class="scroll">Disease Analysis</a></li>
+                        <li class=""><a href="home" class="scroll"> Log out</a></li>
+                       
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+            
+        </header>
+<body>
+    <!-- mian-content -->
+   <div>
+    {% if im %}
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            <!-- //header --><br><br>
+            
+            <div  style="margin-left: 200px;background-color: aliceblue;width: 290px;">
+                <br>
+                <form action="check" method="post" enctype="multipart/form-data" >  
+                    {% csrf_token %}
+                <label style=" width: 240px; margin-left: 30px; background-color:rgb(11, 66, 245);">
+                  <strong>Pharmaceutical Analysis Image</strong>  
+                </label><br><br>
+                <input  type="file" name="upload" required="" style=" width: 200px; margin-left: 40px;"><br>
+              <br>  <button type="submit"  style=" width: 70px;margin-left: 90px;background-color: aquamarine; ">Submit</button>
+                </form>
+                <br>
+
+            </div>
+            {% endif %}
+{% if di %}
+           
+           
+            <div class="box" style="background-color: aliceblue;">
+                <form action="disea" method="post">
+                   
+               {% csrf_token %}
+                    
+                    <label style="position: absolute; left: 50px; top: 10px; "><b>SYMPTOM 1</b></label>
+                    <select name="s1" style="width: 290px; height: 50px ; position: absolute; left: 30px; top: 35px; border-radius: 5px">
+                      <option>----SYMPTOM 1----</option>
+                      {% for i in sys %}
+                               <option value="{{i}}">{{i}}</option>
+                        
+                       {% endfor %}
+                        
+                        
+                        
+                    </select>
+                    <label style="position: absolute; right: 207px; top: 10px; "><b>SYMPTOM 2</b></label>
+                    <select name="s2" style="width: 290px; height: 50px ; position: absolute; right:  30px; top: 35px; border-radius: 5px">
+                        <option>----SYMPTOM 2----</option>
+                      
+                        {% for i in sys %}
+                        <option value="{{i}}">{{i}}</option>
+                 
+                {% endfor %}
+                        
+                        
+                        
+                        
+                    </select>
+                    
+                     <label style="position: absolute; left: 50px; top: 93px; "><b>SYMPTOM 3</b></label>
+                    <select name="s3" style="width: 290px; height: 50px ; position: absolute; left: 30px; top: 120px; border-radius: 5px">
+                        <option>----SYMPTOM 3----</option>
+                        
+                        
+                        {% for i in sys %}
+                        <option value="{{i}}">{{i}}</option>
+                 
+                {% endfor %}
+                        
+                       
+                        
+                    </select>
+                    <label style="position: absolute; right: 207px; top: 93px; "><b>SYMPTOM 4</b></label>
+                    <select name="s4" style="width: 290px; height: 50px ; position: absolute; right:  30px; top: 120px; border-radius: 5px">
+                        
+                        <option>----SYMPTOM 4----</option>
+                      
+                        {% for i in sys %}
+                        <option value="{{i}}">{{i}}</option>
+                 
+                {% endfor %}
+                      
+                        
+                    </select>
+                   
+                    <input type="submit" value="Check" style="width: 100px; height: 50px ; position: absolute; left: 350px; top: 250px; border-radius: 5px; color: white; background-color: #f54785">
+
+                </form>
+            </div>
+       {% endif %}
+        </div>
+
+    
+
+</body>
+{% if msg %}
+<script>
+
+      // display string message
+
+    alert( "{{msg}}" ); // display python variable
+
+</script>
+{% endif %}
+</html>

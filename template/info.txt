@@ -1,0 +1,3 @@
+user: prediction
+email:prediction@gmail.com
+passward:doctor
